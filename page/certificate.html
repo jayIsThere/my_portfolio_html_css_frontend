@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein Lebenslauf</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .zusammen {
+            white-space: nowrap;
+        }
+        .profilbild {
+            margin-left: 100px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .menu ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        .menu a {
+            color: #FFFFFF;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: #FFD400;
+        }
+
+        @media print {
+            body {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Jay is There!</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">About</a></li>
+                <li><a href="qualification.html">Job</a></li>
+                <li><a href="private.html">Life</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="auswertung.php">Feedback Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Zertifikate</h3>
+        <table>
+            <tr>
+                <td>Zusätzlich habe ich Kurse in HTML, CSS und JavaScript absolviert und Zertifikate erhalten:</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://jayisthere.github.io/assets/screenshot_html_css_javascript.png" target="_blank">
+                        <img src="https://jayisthere.github.io/assets/screenshot_html_css_javascript.png" width="100" height="100" alt="Zertifikat">
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Weitere Projekte</h3>
+        <table>
+            <tr>
+                <td>Weitere Projekte können Sie unter folgendem Link einsehen: <a href="https://github.com/jayIsThere">GitHub-Profil</a></td>
+            </tr>
+        </table>
+        <h3>PDF-Dokumentenanforderung</h3>
+        <p>Wählen Sie die gewünschten Unterlagen aus:</p>
+        <form>
+			<fieldset>
+			<legend>Wählen Sie bitte</legend>
+            <p><label><input type="checkbox" name="document" value="zeugnisse" id="zeugnisse" onclick="myFunction()" value="Zeugnisse">Zeugnisse</label></p>
+			<p><label><input type="checkbox" name="document" value="urkunde" id="urkunde" onclick="myFunction()" value="Urkunden">Urkunden</label></p>
+            <p><label><input type="checkbox" name="document" value="zertifikat" id="zertifikat" onclick="myFunction()" value="Zertifikat">Zertifikat</label></p>
+            <p><label><input type="checkbox" name="document" value="praktikum" id="praktikum" onclick="myFunction()" value="Praktikumsunterlagen">Praktikumsunterlagen</label></p>
+			</fieldset>
+
+			<!--<label>Ausgewählte Unterlagen: </label>
+			<input type="text" id="order" size="50">-->
+		
+			<a href="javasctipt:void(0)" onclick="javascript:sendEmail()" class="button"><input type="button" value="Submit"></a>
+			
+        </form>	
+		
+			<script>
+			//function myFunction() {
+			//	var checkboxes = document.forms[0];
+			//	var text = "";
+			//	var i;
+			//	
+			//	for (i = 0; i < checkboxes.length; i++) {
+			//		if (checkboxes[i].checked) {
+			//		text = text + checkboxes[i].value + " ";
+			//		}
+			//	}
+			//	document.getElementById("order").value = text;
+			//}
+			
+			function sendEmail() {
+				//var msg = document.getElementById("order").value;
+				var checkboxes = document.forms[0];
+				var text = "";
+				var i;
+				
+				for (i = 0; i < checkboxes.length; i++) {
+					if (checkboxes[i].checked) {
+					text = text + checkboxes[i].value + " ";
+					}
+				}
+				var url = "mailto:jaehan.kim@studmail.w-hs.de?subject=send%20me&body="+text;
+				location.href = url;
+			}
+			</script>
+            
+		
+		
+		
+		
+
+    </main>
+</body>
+</html>

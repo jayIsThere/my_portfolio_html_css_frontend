@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein Lebenslauf</title>
+    <style>
+		
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .zusammen {
+            white-space: nowrap;
+        }
+        .profilbild {
+            margin-left: 100px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .menu ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+        }
+        .menu li {
+            display: inline-block;
+        }
+        .menu a {
+            color: #FFFFFF;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: #FFD400;
+        }
+
+        @media print {
+            body {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Jay is There!</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">About</a></li>
+                <li><a href="qualification.html">Job</a></li>
+                <li><a href="private.html">Life</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="auswertung.php">Feedback Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h3>Kontakt</h3>
+		
+		<p>If you have any questions, feel free to ask!</p>
+		<br>
+		
+		<form>
+		<legend>Betreff</legend>
+		<input type="text" id="betreff" size="50" placeholder="Title" list="betreffBeispiel">
+		<datalist id="betreffBeispiel">
+		<option value="Hallo">
+		<option value="Hi">
+		</datalist>
+		<legend>Inhalt</legend>
+		<textarea id="order" cols="50" rows="8" placeholder="Write down the email here!" wrap="soft"></textarea><br>
+		<a href="javasctipt:void(0)" onclick="javascript:sendEmail()" class="button"><input type="button" value="Submit"></a><br>
+		</form>
+
+		<script>
+			function sendEmail() {
+				var msg = document.getElementById("order").value;
+				var sub = document.getElementById("betreff").value;
+				var url = "mailto:jaehan.kim@studmail.w-hs.de?subject=" + sub + "&body=" + msg;
+				location.href = url;
+			}
+		</script>
+		
+		<br><br>
+		<p>Oder telefonieren!</p>
+		<p>Telefon: +82 12 345 6789</p>	
+    </main>
+</body>
+</html>

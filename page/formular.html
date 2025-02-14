@@ -1,0 +1,58 @@
+<!doctype html>
+	<html lang="de">
+		<head>
+		<meta charset="utf-8">
+		<title> Formular </title>
+		<link rel="stylesheet" href="style_index.css">
+		</head>
+		<body>
+		<header>
+			<div>
+			<nav>
+				<ul>
+					<li><a href="index.html"> Anschreiben </a></li>
+					<li><a href="lebenslauf.html"> Lebenslauf </a></li>
+					<li><a href="kenntnisse.html"> Kenntnisse </a></li>
+					<li><a href="über_mich.html"> Über mich </a></li>
+					<li><a href="formular.html" class="active"> Formular </a></li>
+					<li><a href="kontakt.html"> Kontakt </a></li>
+					<li><a href="auswertung.html"> Auswertung </a></li>
+					<li><a href="auswertung.php">Feedback Table</a></li>
+				</ul>
+			</nav>	
+			</div>
+		</header>
+			<div class="allgemein_container">
+				<div class="text_anschreiben">
+					<h1 class="ueberschrift"> Formular </h1>
+					<hr>
+						<div class="formular_container">
+						<form method="post" action="mailto:sonja.struppek@web.de?subject=Zeugnisse"
+							 enctype="text/plain"
+							 onSubmit="window.alert">
+							<p>
+							Bei Interesse sende ich Ihnen gerne meine Zeugnisse <br>per E-Mail zu. Bitte wählen Sie aus:
+							</p><br>
+							<h3>Schulzeugnisse:</h3>
+								
+								<input type="checkbox" name="Zeugniss" value="Abschlusszeugnis Realschule"> Abschlusszeugnis Realschule<br>
+								<input type="checkbox" name="Zeugniss" value="Abschlusszeugnis Fachhochschulreife"> Abschlusszeugnis Fachhochschulreife<br>
+								<input type="checkbox" name="Zeugniss" value="Abschlusszeugnis Ausbildung"> Abschlusszeugnis Ausbildung<br><br>
+
+							<h3>Arbeitszeugnisse:</h3>
+								<input type="checkbox" name="Zeugniss" value="Arbeitszeugnis Bundesfreiwilligendienst"> Arbeitszeugnis Bundesfreiwilligendienst<br>
+								<input type="checkbox" name="Zeugniss" value="Arbeitszeugnis Praktikum"> Arbeitszeugnis Praktikum<br>
+								<input type="checkbox" name="Zeugniss" value="Arbeitszeugnis Hardeck"> Arbeitszeugnis Hardeck<br><br>
+						<br>	
+							<p>
+								<label><h4>Sonstiges:</h>
+									<input type="text" size="40" name="Sonstiges">
+								</label>
+							</p><br>
+							<input type="submit" value="Absenden" class="form-submit-button"> </input>
+						</form>
+					</div>
+				</div>
+			</div>	
+		</body>
+	</html>
